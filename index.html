@@ -1,546 +1,546 @@
-!DOCTYPE html
-html lang=ja
-head
-  meta charset=UTF-8 
-  meta name=viewport content=width=device-width, initial-scale=1.0 
-  title金子圧送  愛知のコンクリート圧送・生コン打設title
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>金子圧送 | 愛知のコンクリート圧送・生コン打設</title>
 
-  script src=httpscdn.tailwindcss.comscript
-  link rel=preconnect href=httpsfonts.googleapis.com
-  link rel=preconnect href=httpsfonts.gstatic.com crossorigin
-  link href=httpsfonts.googleapis.comcss2family=Noto+Sans+JPwght@400;500;700;900&family=Oswaldwght@500;700&display=swap rel=stylesheet
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 
-  script
+  <script>
     tailwind.config = {
-      theme {
-        extend {
-          fontFamily {
-            sans ['Noto Sans JP', 'sans-serif'],
-            oswald ['Oswald', 'sans-serif']
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Noto Sans JP', 'sans-serif'],
+            oswald: ['Oswald', 'sans-serif']
           },
-          colors {
-            base '#080a0c',
-            iron '#151a1f',
-            steel '#242b33',
-            orange '#ff7a1a',
-            safety '#ffb000',
-            concrete '#e8e5df'
+          colors: {
+            base: '#080a0c',
+            iron: '#151a1f',
+            steel: '#242b33',
+            orange: '#ff7a1a',
+            safety: '#ffb000',
+            concrete: '#e8e5df'
           },
-          boxShadow {
-            glow '0 0 42px rgba(255,122,26,.38)',
-            hard '0 24px 70px rgba(0,0,0,.35)'
+          boxShadow: {
+            glow: '0 0 42px rgba(255,122,26,.38)',
+            hard: '0 24px 70px rgba(0,0,0,.35)'
           }
         }
       }
     }
-  script
+  </script>
 
-  style
-    html { scroll-behavior smooth; }
-    body { background#080a0c; color#fff; }
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background:#080a0c; color:#fff; }
 
     .glass {
-      background rgba(255,255,255,.08);
-      backdrop-filter blur(18px);
-      border 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.08);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,.14);
     }
 
     .hero {
-      background
+      background:
         linear-gradient(to bottom, rgba(8,10,12,.48), rgba(8,10,12,.96)),
-        url('httpsimages.unsplash.comphoto-1503387762-592deb58ef4eauto=format&fit=crop&w=1800&q=90') centercover;
-      position relative;
+        url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=90') center/cover;
+      position: relative;
     }
 
-    .herobefore {
-      content;
-      positionabsolute;
-      inset0;
-      background-image
+    .hero::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background-image:
         linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
-      background-size 44px 44px;
-      mask-image linear-gradient(to bottom, black, transparent 90%);
-      pointer-eventsnone;
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, black, transparent 90%);
+      pointer-events:none;
     }
 
-    .heroafter {
-      content;
-      positionabsolute;
-      right-25%;
-      bottom-25%;
-      width620px;
-      height620px;
-      border-radius999px;
-      backgroundradial-gradient(circle, rgba(255,122,26,.30), transparent 66%);
-      filterblur(35px);
-      animationpulseGlow 4s ease-in-out infinite;
+    .hero::after {
+      content:"";
+      position:absolute;
+      right:-25%;
+      bottom:-25%;
+      width:620px;
+      height:620px;
+      border-radius:999px;
+      background:radial-gradient(circle, rgba(255,122,26,.30), transparent 66%);
+      filter:blur(35px);
+      animation:pulseGlow 4s ease-in-out infinite;
     }
 
     @keyframes pulseGlow {
-      0%,100% { opacity.5; transformscale(1); }
-      50% { opacity.9; transformscale(1.08); }
+      0%,100% { opacity:.5; transform:scale(1); }
+      50% { opacity:.9; transform:scale(1.08); }
     }
 
     .intro {
-      positionfixed;
-      inset0;
-      z-index999;
-      background
+      position:fixed;
+      inset:0;
+      z-index:999;
+      background:
         radial-gradient(circle at center, rgba(255,122,26,.18), transparent 34%),
         #080a0c;
-      displaygrid;
-      place-itemscenter;
-      animationintroOut .9s ease forwards 2.15s;
+      display:grid;
+      place-items:center;
+      animation:introOut .9s ease forwards 2.15s;
     }
 
     .intro-inner {
-      text-aligncenter;
-      animationintroIn 1.6s cubic-bezier(.2,1,.2,1) forwards;
+      text-align:center;
+      animation:introIn 1.6s cubic-bezier(.2,1,.2,1) forwards;
     }
 
     @keyframes introOut {
-      to { opacity0; visibilityhidden; transformscale(1.04); }
+      to { opacity:0; visibility:hidden; transform:scale(1.04); }
     }
 
     @keyframes introIn {
-      0% { opacity0; transformtranslateY(24px) scale(.94); filterblur(18px); }
-      50% { opacity1; transformtranslateY(0) scale(1); filterblur(0); }
-      100% { opacity1; transformtranslateY(-3px); }
+      0% { opacity:0; transform:translateY(24px) scale(.94); filter:blur(18px); }
+      50% { opacity:1; transform:translateY(0) scale(1); filter:blur(0); }
+      100% { opacity:1; transform:translateY(-3px); }
     }
 
     .reveal,
     .reveal-left,
     .reveal-right {
-      opacity0;
-      transition.9s cubic-bezier(.2,1,.2,1);
+      opacity:0;
+      transition:.9s cubic-bezier(.2,1,.2,1);
     }
 
-    .reveal { transformtranslateY(34px); }
-    .reveal-left { transformtranslateX(-36px); }
-    .reveal-right { transformtranslateX(36px); }
+    .reveal { transform:translateY(34px); }
+    .reveal-left { transform:translateX(-36px); }
+    .reveal-right { transform:translateX(36px); }
 
     .reveal.show,
     .reveal-left.show,
     .reveal-right.show {
-      opacity1;
-      transformtranslate(0,0);
+      opacity:1;
+      transform:translate(0,0);
     }
 
-    .marquee { animation marquee 24s linear infinite; }
+    .marquee { animation: marquee 24s linear infinite; }
 
     @keyframes marquee {
-      from { transformtranslateX(0); }
-      to { transformtranslateX(-50%); }
+      from { transform:translateX(0); }
+      to { transform:translateX(-50%); }
     }
 
     .shine {
-      positionrelative;
-      overflowhidden;
+      position:relative;
+      overflow:hidden;
     }
 
-    .shinebefore {
-      content;
-      positionabsolute;
-      top0;
-      left-120%;
-      width70%;
-      height100%;
-      transformskewX(-25deg);
-      backgroundlinear-gradient(90deg, transparent, rgba(255,255,255,.55), transparent);
-      animationshine 3s infinite;
+    .shine::before {
+      content:"";
+      position:absolute;
+      top:0;
+      left:-120%;
+      width:70%;
+      height:100%;
+      transform:skewX(-25deg);
+      background:linear-gradient(90deg, transparent, rgba(255,255,255,.55), transparent);
+      animation:shine 3s infinite;
     }
 
     @keyframes shine {
-      0% { left-120%; }
-      55%,100% { left140%; }
+      0% { left:-120%; }
+      55%,100% { left:140%; }
     }
 
     .tilt-card {
-      transition.35s ease;
-      transform-stylepreserve-3d;
+      transition:.35s ease;
+      transform-style:preserve-3d;
     }
 
-    .tilt-cardhover {
-      transformtranslateY(-8px) rotateX(2deg) rotateY(-2deg);
+    .tilt-card:hover {
+      transform:translateY(-8px) rotateX(2deg) rotateY(-2deg);
     }
 
     .work-card img {
-      transition transform .85s ease;
+      transition: transform .85s ease;
     }
 
-    .work-cardhover img {
-      transform scale(1.08);
+    .work-card:hover img {
+      transform: scale(1.08);
     }
 
     .scan-line {
-      positionabsolute;
-      inset0;
-      backgroundlinear-gradient(to bottom, transparent, rgba(255,122,26,.18), transparent);
-      height32%;
-      animationscan 4.5s linear infinite;
-      pointer-eventsnone;
-      opacity.55;
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to bottom, transparent, rgba(255,122,26,.18), transparent);
+      height:32%;
+      animation:scan 4.5s linear infinite;
+      pointer-events:none;
+      opacity:.55;
     }
 
     @keyframes scan {
-      from { transformtranslateY(-120%); }
-      to { transformtranslateY(360%); }
+      from { transform:translateY(-120%); }
+      to { transform:translateY(360%); }
     }
 
     .scroll-line {
-      width1px;
-      height60px;
-      backgroundlinear-gradient(to bottom, white, transparent);
-      animationscrollLine 1.8s ease-in-out infinite;
+      width:1px;
+      height:60px;
+      background:linear-gradient(to bottom, white, transparent);
+      animation:scrollLine 1.8s ease-in-out infinite;
     }
 
     @keyframes scrollLine {
-      0% { transformscaleY(0); transform-origintop; opacity.35; }
-      50% { transformscaleY(1); opacity1; }
-      100% { transformscaleY(0); transform-originbottom; opacity.35; }
+      0% { transform:scaleY(0); transform-origin:top; opacity:.35; }
+      50% { transform:scaleY(1); opacity:1; }
+      100% { transform:scaleY(0); transform-origin:bottom; opacity:.35; }
     }
 
-    .noisebefore {
-      content;
-      positionfixed;
-      inset0;
-      pointer-eventsnone;
-      z-index1000;
-      opacity.05;
-      background-imageurl('dataimagesvg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22httpwww.w3.org2000svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22%3E%3Cfilter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22%3E%3Csvg%3E');
+    .noise::before {
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:1000;
+      opacity:.05;
+      background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');
     }
 
     .form-input {
-      width100%;
-      border-radius1rem;
-      border1px solid rgba(8,10,12,.15);
-      background#fff;
-      color#080a0c;
-      padding1rem;
-      outlinenone;
+      width:100%;
+      border-radius:1rem;
+      border:1px solid rgba(8,10,12,.15);
+      background:#fff;
+      color:#080a0c;
+      padding:1rem;
+      outline:none;
     }
 
-    .form-inputfocus {
-      border-color#ff7a1a;
-      box-shadow0 0 0 4px rgba(255,122,26,.16);
+    .form-input:focus {
+      border-color:#ff7a1a;
+      box-shadow:0 0 0 4px rgba(255,122,26,.16);
     }
-  style
-head
+  </style>
+</head>
 
-body class=font-sans pb-24 mdpb-0 noise
+<body class="font-sans pb-24 md:pb-0 noise">
 
-  div class=intro
-    div class=intro-inner
-      p class=text-orange tracking-[.35em] text-xs font-black mb-4CONCRETE PUMPINGp
-      h1 class=text-5xl font-black tracking-tight金子圧送h1
-      div class=h-px w-56 mx-auto mt-5 bg-gradient-to-r from-transparent via-orange to-transparentdiv
-      p class=text-white55 text-xs tracking-[.26em] mt-5AICHI  PUMP  CONSTRUCTIONp
-    div
-  div
+  <div class="intro">
+    <div class="intro-inner">
+      <p class="text-orange tracking-[.35em] text-xs font-black mb-4">CONCRETE PUMPING</p>
+      <h1 class="text-5xl font-black tracking-tight">金子圧送</h1>
+      <div class="h-px w-56 mx-auto mt-5 bg-gradient-to-r from-transparent via-orange to-transparent"></div>
+      <p class="text-white/55 text-xs tracking-[.26em] mt-5">AICHI / PUMP / CONSTRUCTION</p>
+    </div>
+  </div>
 
-  header class=fixed top-0 left-0 right-0 z-50 bg-base82 backdrop-blur-xl border-b border-white10
-    div class=max-w-6xl mx-auto h-16 px-4 flex items-center justify-between
-      a href=# class=flex items-center gap-3
-        div class=w-11 h-11 rounded-xl bg-orange text-base grid place-items-center font-black shadow-glow圧div
-        div
-          p class=font-black text-xl leading-none金子圧送p
-          p class=font-oswald tracking-[.22em] text-[10px] text-white55 mt-1CONCRETE PUMPp
-        div
-      a
+  <header class="fixed top-0 left-0 right-0 z-50 bg-base/82 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-6xl mx-auto h-16 px-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-xl bg-orange text-base grid place-items-center font-black shadow-glow">圧</div>
+        <div>
+          <p class="font-black text-xl leading-none">金子圧送</p>
+          <p class="font-oswald tracking-[.22em] text-[10px] text-white/55 mt-1">CONCRETE PUMP</p>
+        </div>
+      </a>
 
-      nav class=hidden mdflex items-center gap-7 text-sm text-white70 font-bold
-        a href=#service class=hovertext-orange業務内容a
-        a href=#works class=hovertext-orange施工事例a
-        a href=#field class=hovertext-orange対応現場a
-        a href=#recruit class=hovertext-orange求人a
-      nav
+      <nav class="hidden md:flex items-center gap-7 text-sm text-white/70 font-bold">
+        <a href="#service" class="hover:text-orange">業務内容</a>
+        <a href="#works" class="hover:text-orange">施工事例</a>
+        <a href="#field" class="hover:text-orange">対応現場</a>
+        <a href="#recruit" class="hover:text-orange">求人</a>
+      </nav>
 
-      a href=#contact class=shine rounded-full bg-orange text-base px-5 py-2 font-black text-sm相談するa
-    div
-  header
+      <a href="#contact" class="shine rounded-full bg-orange text-base px-5 py-2 font-black text-sm">相談する</a>
+    </div>
+  </header>
 
-  section class=hero min-h-screen px-4 pt-24 flex items-end overflow-hidden
-    div class=absolute top-24 right-6 glass rounded-2xl px-4 py-3 text-sm hidden mdblock
-      愛知メイン  現場対応
-    div
+  <section class="hero min-h-screen px-4 pt-24 flex items-end overflow-hidden">
+    <div class="absolute top-24 right-6 glass rounded-2xl px-4 py-3 text-sm hidden md:block">
+      愛知メイン / 現場対応
+    </div>
 
-    div class=max-w-6xl mx-auto w-full pb-16 relative z-10
-      p class=inline-flex glass rounded-full px-4 py-2 text-sm text-white85 mb-6 reveal
-        愛知県メイン  コンクリート圧送・生コン打設
-      p
+    <div class="max-w-6xl mx-auto w-full pb-16 relative z-10">
+      <p class="inline-flex glass rounded-full px-4 py-2 text-sm text-white/85 mb-6 reveal">
+        愛知県メイン / コンクリート圧送・生コン打設
+      </p>
 
-      h1 class=text-5xl smtext-6xl mdtext-8xl font-black leading-[1.05] tracking-[-.06em] reveal-left
-        現場をbr
-        止めない、br
-        span class=text-orange drop-shadow-[0_0_22px_rgba(255,122,26,.55)]確かな圧送。span
-      h1
+      <h1 class="text-5xl sm:text-6xl md:text-8xl font-black leading-[1.05] tracking-[-.06em] reveal-left">
+        現場を<br>
+        止めない、<br>
+        <span class="text-orange drop-shadow-[0_0_22px_rgba(255,122,26,.55)]">確かな圧送。</span>
+      </h1>
 
-      p class=mt-6 text-white75 leading-8 text-lg max-w-xl reveal
+      <p class="mt-6 text-white/75 leading-8 text-lg max-w-xl reveal">
         コンクリート圧送、ポンプ屋、生コン打設まで。住宅・外構・基礎工事の現場を、スピードと丁寧さで支えます。
-      p
+      </p>
 
-      div class=mt-8 grid grid-cols-2 gap-3 max-w-md reveal
-        a href=#contact class=shine rounded-full bg-orange text-base py-4 text-center font-black shadow-glow現場相談a
-        a href=#recruit class=rounded-full glass py-4 text-center font-black hoverbg-white15 transition求人を見るa
-      div
+      <div class="mt-8 grid grid-cols-2 gap-3 max-w-md reveal">
+        <a href="#contact" class="shine rounded-full bg-orange text-base py-4 text-center font-black shadow-glow">現場相談</a>
+        <a href="#recruit" class="rounded-full glass py-4 text-center font-black hover:bg-white/15 transition">求人を見る</a>
+      </div>
 
-      div class=mt-10 flex gap-3 overflow-x-auto pb-2 reveal
-        div class=glass rounded-full px-5 py-3 whitespace-nowrap text-sm○ コンクリート圧送div
-        div class=glass rounded-full px-5 py-3 whitespace-nowrap text-sm○ ポンプ屋div
-        div class=glass rounded-full px-5 py-3 whitespace-nowrap text-sm○ 生コン打設div
-        div class=glass rounded-full px-5 py-3 whitespace-nowrap text-sm○ 愛知メインdiv
-      div
+      <div class="mt-10 flex gap-3 overflow-x-auto pb-2 reveal">
+        <div class="glass rounded-full px-5 py-3 whitespace-nowrap text-sm">○ コンクリート圧送</div>
+        <div class="glass rounded-full px-5 py-3 whitespace-nowrap text-sm">○ ポンプ屋</div>
+        <div class="glass rounded-full px-5 py-3 whitespace-nowrap text-sm">○ 生コン打設</div>
+        <div class="glass rounded-full px-5 py-3 whitespace-nowrap text-sm">○ 愛知メイン</div>
+      </div>
 
-      div class=hidden mdflex absolute right-0 bottom-20 flex-col items-center gap-4 text-white45 tracking-[.35em] text-xs
-        spanSCROLLspan
-        div class=scroll-linediv
-      div
-    div
-  section
+      <div class="hidden md:flex absolute right-0 bottom-20 flex-col items-center gap-4 text-white/45 tracking-[.35em] text-xs">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+  </section>
 
-  div class=bg-orange text-base overflow-hidden py-3
-    div class=marquee flex gap-10 whitespace-nowrap font-black tracking-[.22em] text-sm
-      spanCONCRETE PUMPINGspanspan生コン打設spanspan愛知県メインspanspanポンプ屋spanspan従業員募集中span
-      spanCONCRETE PUMPINGspanspan生コン打設spanspan愛知県メインspanspanポンプ屋spanspan従業員募集中span
-    div
-  div
+  <div class="bg-orange text-base overflow-hidden py-3">
+    <div class="marquee flex gap-10 whitespace-nowrap font-black tracking-[.22em] text-sm">
+      <span>CONCRETE PUMPING</span><span>生コン打設</span><span>愛知県メイン</span><span>ポンプ屋</span><span>従業員募集中</span>
+      <span>CONCRETE PUMPING</span><span>生コン打設</span><span>愛知県メイン</span><span>ポンプ屋</span><span>従業員募集中</span>
+    </div>
+  </div>
 
-  section id=service class=py-20 px-4 bg-base relative overflow-hidden
-    div class=absolute -right-32 top-10 w-96 h-96 bg-orange12 blur-3xl rounded-fulldiv
+  <section id="service" class="py-20 px-4 bg-base relative overflow-hidden">
+    <div class="absolute -right-32 top-10 w-96 h-96 bg-orange/12 blur-3xl rounded-full"></div>
 
-    div class=max-w-6xl mx-auto relative
-      p class=font-oswald text-orange tracking-[.3em] text-xs revealSERVICEp
-      h2 class=text-4xl mdtext-5xl font-black mt-3 reveal-left依頼できること。h2
-      p class=text-white62 leading-8 mt-5 max-w-2xl reveal
+    <div class="max-w-6xl mx-auto relative">
+      <p class="font-oswald text-orange tracking-[.3em] text-xs reveal">SERVICE</p>
+      <h2 class="text-4xl md:text-5xl font-black mt-3 reveal-left">依頼できること。</h2>
+      <p class="text-white/62 leading-8 mt-5 max-w-2xl reveal">
         住宅基礎・外構・土間・駐車場など、現場に合わせて柔軟に対応。小さな相談からお気軽にご連絡ください。
-      p
+      </p>
 
-      div class=grid mdgrid-cols-3 gap-4 mt-10
-        article class=glass rounded-3xl p-6 tilt-card reveal
-          p class=text-4xl🚚p
-          h3 class=text-2xl font-black mt-4コンクリート圧送h3
-          p class=text-white55 text-sm leading-7 mt-3現場状況に合わせてスムーズに圧送。狭小地・住宅地もご相談ください。p
-        article
+      <div class="grid md:grid-cols-3 gap-4 mt-10">
+        <article class="glass rounded-3xl p-6 tilt-card reveal">
+          <p class="text-4xl">🚚</p>
+          <h3 class="text-2xl font-black mt-4">コンクリート圧送</h3>
+          <p class="text-white/55 text-sm leading-7 mt-3">現場状況に合わせてスムーズに圧送。狭小地・住宅地もご相談ください。</p>
+        </article>
 
-        article class=glass rounded-3xl p-6 tilt-card reveal
-          p class=text-4xl🏗️p
-          h3 class=text-2xl font-black mt-4ポンプ屋h3
-          p class=text-white55 text-sm leading-7 mt-3生コン打設に必要なポンプ作業を丁寧に対応。現場の段取りを支えます。p
-        article
+        <article class="glass rounded-3xl p-6 tilt-card reveal">
+          <p class="text-4xl">🏗️</p>
+          <h3 class="text-2xl font-black mt-4">ポンプ屋</h3>
+          <p class="text-white/55 text-sm leading-7 mt-3">生コン打設に必要なポンプ作業を丁寧に対応。現場の段取りを支えます。</p>
+        </article>
 
-        article class=glass rounded-3xl p-6 tilt-card reveal
-          p class=text-4xl🧱p
-          h3 class=text-2xl font-black mt-4生コン打設h3
-          p class=text-white55 text-sm leading-7 mt-3基礎・土間・外構などの打設現場に対応。仕上がりと効率を重視。p
-        article
-      div
-    div
-  section
+        <article class="glass rounded-3xl p-6 tilt-card reveal">
+          <p class="text-4xl">🧱</p>
+          <h3 class="text-2xl font-black mt-4">生コン打設</h3>
+          <p class="text-white/55 text-sm leading-7 mt-3">基礎・土間・外構などの打設現場に対応。仕上がりと効率を重視。</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-  section id=works class=py-20 px-4 bg-concrete text-base relative overflow-hidden
-    div class=max-w-6xl mx-auto
-      p class=font-oswald text-orange tracking-[.3em] text-xs revealWORKSp
-      h2 class=text-4xl mdtext-5xl font-black mt-3 reveal-left施工事例・対応現場h2
-      p class=text-base65 leading-8 mt-5 max-w-2xl reveal
+  <section id="works" class="py-20 px-4 bg-concrete text-base relative overflow-hidden">
+    <div class="max-w-6xl mx-auto">
+      <p class="font-oswald text-orange tracking-[.3em] text-xs reveal">WORKS</p>
+      <h2 class="text-4xl md:text-5xl font-black mt-3 reveal-left">施工事例・対応現場</h2>
+      <p class="text-base/65 leading-8 mt-5 max-w-2xl reveal">
         住宅基礎、外構、土間コンクリート、駐車場、造成工事など、現場に合わせてコンクリート圧送・生コン打設を行います。
-      p
+      </p>
 
-      div class=grid grid-cols-1 mdgrid-cols-3 gap-4 mt-10
-        article class=work-card rounded-[2rem] overflow-hidden bg-white shadow-hard tilt-card reveal
-          div class=relative h-72 overflow-hidden
-            img src=httpsimages.unsplash.comphoto-1600585154340-be6161a56a0cauto=format&fit=crop&w=900&q=85 class=w-full h-full object-cover
-            div class=scan-linediv
-          div
-          div class=p-5
-            p class=font-oswald text-orange tracking-[.25em] text-xsCASE 01p
-            h3 class=text-xl font-black mt-2住宅基礎の打設h3
-            p class=text-base60 text-sm leading-7 mt-3新築住宅の基礎工事における生コン打設。現場の進行に合わせ、スムーズな圧送作業を行います。p
-          div
-        article
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
+        <article class="work-card rounded-[2rem] overflow-hidden bg-white shadow-hard tilt-card reveal">
+          <div class="relative h-72 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" class="w-full h-full object-cover">
+            <div class="scan-line"></div>
+          </div>
+          <div class="p-5">
+            <p class="font-oswald text-orange tracking-[.25em] text-xs">CASE 01</p>
+            <h3 class="text-xl font-black mt-2">住宅基礎の打設</h3>
+            <p class="text-base/60 text-sm leading-7 mt-3">新築住宅の基礎工事における生コン打設。現場の進行に合わせ、スムーズな圧送作業を行います。</p>
+          </div>
+        </article>
 
-        article class=work-card rounded-[2rem] overflow-hidden bg-white shadow-hard tilt-card reveal
-          div class=relative h-72 overflow-hidden
-            img src=httpsimages.unsplash.comphoto-1503387762-592deb58ef4eauto=format&fit=crop&w=900&q=85 class=w-full h-full object-cover
-            div class=scan-linediv
-          div
-          div class=p-5
-            p class=font-oswald text-orange tracking-[.25em] text-xsCASE 02p
-            h3 class=text-xl font-black mt-2外構・土間コンクリートh3
-            p class=text-base60 text-sm leading-7 mt-3玄関まわり、アプローチ、土間などの外構工事に対応。住宅地や狭い現場もご相談ください。p
-          div
-        article
+        <article class="work-card rounded-[2rem] overflow-hidden bg-white shadow-hard tilt-card reveal">
+          <div class="relative h-72 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=85" class="w-full h-full object-cover">
+            <div class="scan-line"></div>
+          </div>
+          <div class="p-5">
+            <p class="font-oswald text-orange tracking-[.25em] text-xs">CASE 02</p>
+            <h3 class="text-xl font-black mt-2">外構・土間コンクリート</h3>
+            <p class="text-base/60 text-sm leading-7 mt-3">玄関まわり、アプローチ、土間などの外構工事に対応。住宅地や狭い現場もご相談ください。</p>
+          </div>
+        </article>
 
-        article class=work-card rounded-[2rem] overflow-hidden bg-white shadow-hard tilt-card reveal
-          div class=relative h-72 overflow-hidden
-            img src=httpsimages.unsplash.comphoto-1581094288338-2314dddb7eceauto=format&fit=crop&w=900&q=85 class=w-full h-full object-cover
-            div class=scan-linediv
-          div
-          div class=p-5
-            p class=font-oswald text-orange tracking-[.25em] text-xsCASE 03p
-            h3 class=text-xl font-black mt-2駐車場コンクリートh3
-            p class=text-base60 text-sm leading-7 mt-3駐車場や車庫まわりのコンクリート打設。仕上がりと作業効率を意識して対応します。p
-          div
-        article
+        <article class="work-card rounded-[2rem] overflow-hidden bg-white shadow-hard tilt-card reveal">
+          <div class="relative h-72 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=900&q=85" class="w-full h-full object-cover">
+            <div class="scan-line"></div>
+          </div>
+          <div class="p-5">
+            <p class="font-oswald text-orange tracking-[.25em] text-xs">CASE 03</p>
+            <h3 class="text-xl font-black mt-2">駐車場コンクリート</h3>
+            <p class="text-base/60 text-sm leading-7 mt-3">駐車場や車庫まわりのコンクリート打設。仕上がりと作業効率を意識して対応します。</p>
+          </div>
+        </article>
 
-        article class=work-card rounded-[2rem] overflow-hidden bg-white shadow-hard tilt-card reveal
-          div class=relative h-72 overflow-hidden
-            img src=httpsimages.unsplash.comphoto-1590644365607-1c5a5e6ddc8fauto=format&fit=crop&w=900&q=85 class=w-full h-full object-cover
-            div class=scan-linediv
-          div
-          div class=p-5
-            p class=font-oswald text-orange tracking-[.25em] text-xsCASE 04p
-            h3 class=text-xl font-black mt-2狭小地での圧送h3
-            p class=text-base60 text-sm leading-7 mt-3重機や車両の入りづらい現場も、状況を確認しながら段取りよく作業します。p
-          div
-        article
+        <article class="work-card rounded-[2rem] overflow-hidden bg-white shadow-hard tilt-card reveal">
+          <div class="relative h-72 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1590644365607-1c5a5e6ddc8f?auto=format&fit=crop&w=900&q=85" class="w-full h-full object-cover">
+            <div class="scan-line"></div>
+          </div>
+          <div class="p-5">
+            <p class="font-oswald text-orange tracking-[.25em] text-xs">CASE 04</p>
+            <h3 class="text-xl font-black mt-2">狭小地での圧送</h3>
+            <p class="text-base/60 text-sm leading-7 mt-3">重機や車両の入りづらい現場も、状況を確認しながら段取りよく作業します。</p>
+          </div>
+        </article>
 
-        article class=work-card rounded-[2rem] overflow-hidden bg-white shadow-hard tilt-card reveal
-          div class=relative h-72 overflow-hidden
-            img src=httpsimages.unsplash.comphoto-1599707254554-027aeb4deacdauto=format&fit=crop&w=900&q=85 class=w-full h-full object-cover
-            div class=scan-linediv
-          div
-          div class=p-5
-            p class=font-oswald text-orange tracking-[.25em] text-xsCASE 05p
-            h3 class=text-xl font-black mt-2造成・擁壁まわりh3
-            p class=text-base60 text-sm leading-7 mt-3造成工事や擁壁まわりの打設相談にも対応。現場条件に合わせて作業します。p
-          div
-        article
+        <article class="work-card rounded-[2rem] overflow-hidden bg-white shadow-hard tilt-card reveal">
+          <div class="relative h-72 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1599707254554-027aeb4deacd?auto=format&fit=crop&w=900&q=85" class="w-full h-full object-cover">
+            <div class="scan-line"></div>
+          </div>
+          <div class="p-5">
+            <p class="font-oswald text-orange tracking-[.25em] text-xs">CASE 05</p>
+            <h3 class="text-xl font-black mt-2">造成・擁壁まわり</h3>
+            <p class="text-base/60 text-sm leading-7 mt-3">造成工事や擁壁まわりの打設相談にも対応。現場条件に合わせて作業します。</p>
+          </div>
+        </article>
 
-        article class=work-card rounded-[2rem] overflow-hidden bg-white shadow-hard tilt-card reveal
-          div class=relative h-72 overflow-hidden
-            img src=httpsimages.unsplash.comphoto-1518709268805-4e9042af2176auto=format&fit=crop&w=900&q=85 class=w-full h-full object-cover
-            div class=scan-linediv
-          div
-          div class=p-5
-            p class=font-oswald text-orange tracking-[.25em] text-xsCASE 06p
-            h3 class=text-xl font-black mt-2小規模打設・部分施工h3
-            p class=text-base60 text-sm leading-7 mt-3少量の打設や部分的な作業もご相談可能。まずは現場内容をお聞かせください。p
-          div
-        article
-      div
-    div
-  section
+        <article class="work-card rounded-[2rem] overflow-hidden bg-white shadow-hard tilt-card reveal">
+          <div class="relative h-72 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=900&q=85" class="w-full h-full object-cover">
+            <div class="scan-line"></div>
+          </div>
+          <div class="p-5">
+            <p class="font-oswald text-orange tracking-[.25em] text-xs">CASE 06</p>
+            <h3 class="text-xl font-black mt-2">小規模打設・部分施工</h3>
+            <p class="text-base/60 text-sm leading-7 mt-3">少量の打設や部分的な作業もご相談可能。まずは現場内容をお聞かせください。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-  section id=field class=py-20 px-4 bg-base border-t border-white10
-    div class=max-w-6xl mx-auto
-      p class=font-oswald text-orange tracking-[.3em] text-xs revealFIELDp
-      h2 class=text-4xl mdtext-5xl font-black mt-3 reveal-leftこんな現場に対応します。h2
+  <section id="field" class="py-20 px-4 bg-base border-t border-white/10">
+    <div class="max-w-6xl mx-auto">
+      <p class="font-oswald text-orange tracking-[.3em] text-xs reveal">FIELD</p>
+      <h2 class="text-4xl md:text-5xl font-black mt-3 reveal-left">こんな現場に対応します。</h2>
 
-      div class=grid grid-cols-2 mdgrid-cols-4 gap-4 mt-10
-        div class=glass rounded-3xl p-5 tilt-card revealp class=text-3xl🏠ph3 class=font-black mt-3住宅基礎h3div
-        div class=glass rounded-3xl p-5 tilt-card revealp class=text-3xl🚗ph3 class=font-black mt-3駐車場h3div
-        div class=glass rounded-3xl p-5 tilt-card revealp class=text-3xl🧱ph3 class=font-black mt-3外構・土間h3div
-        div class=glass rounded-3xl p-5 tilt-card revealp class=text-3xl🏗️ph3 class=font-black mt-3造成工事h3div
-        div class=glass rounded-3xl p-5 tilt-card revealp class=text-3xl📏ph3 class=font-black mt-3狭小地h3div
-        div class=glass rounded-3xl p-5 tilt-card revealp class=text-3xl🕐ph3 class=font-black mt-3急ぎ相談h3div
-        div class=glass rounded-3xl p-5 tilt-card revealp class=text-3xl💧ph3 class=font-black mt-3少量打設h3div
-        div class=glass rounded-3xl p-5 tilt-card revealp class=text-3xl👷ph3 class=font-black mt-3応援作業h3div
-      div
-    div
-  section
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+        <div class="glass rounded-3xl p-5 tilt-card reveal"><p class="text-3xl">🏠</p><h3 class="font-black mt-3">住宅基礎</h3></div>
+        <div class="glass rounded-3xl p-5 tilt-card reveal"><p class="text-3xl">🚗</p><h3 class="font-black mt-3">駐車場</h3></div>
+        <div class="glass rounded-3xl p-5 tilt-card reveal"><p class="text-3xl">🧱</p><h3 class="font-black mt-3">外構・土間</h3></div>
+        <div class="glass rounded-3xl p-5 tilt-card reveal"><p class="text-3xl">🏗️</p><h3 class="font-black mt-3">造成工事</h3></div>
+        <div class="glass rounded-3xl p-5 tilt-card reveal"><p class="text-3xl">📏</p><h3 class="font-black mt-3">狭小地</h3></div>
+        <div class="glass rounded-3xl p-5 tilt-card reveal"><p class="text-3xl">🕐</p><h3 class="font-black mt-3">急ぎ相談</h3></div>
+        <div class="glass rounded-3xl p-5 tilt-card reveal"><p class="text-3xl">💧</p><h3 class="font-black mt-3">少量打設</h3></div>
+        <div class="glass rounded-3xl p-5 tilt-card reveal"><p class="text-3xl">👷</p><h3 class="font-black mt-3">応援作業</h3></div>
+      </div>
+    </div>
+  </section>
 
-  section class=py-20 px-4 bg-base
-    div class=max-w-6xl mx-auto grid mdgrid-cols-2 gap-8 items-center
-      div class=reveal-left
-        p class=font-oswald text-orange tracking-[.3em] text-xsAREAp
-        h2 class=text-4xl mdtext-5xl font-black mt-3愛知県をメインに、br現場へ向かいます。h2
-        p class=text-white62 leading-8 mt-5
+  <section class="py-20 px-4 bg-base">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+      <div class="reveal-left">
+        <p class="font-oswald text-orange tracking-[.3em] text-xs">AREA</p>
+        <h2 class="text-4xl md:text-5xl font-black mt-3">愛知県をメインに、<br>現場へ向かいます。</h2>
+        <p class="text-white/62 leading-8 mt-5">
           対応エリア・日程・現場条件など、まずはお気軽にご相談ください。急ぎの現場も内容により対応可能です。
-        p
-      div
+        </p>
+      </div>
 
-      div class=glass rounded-[2rem] p-6 reveal-right
-        div class=grid grid-cols-2 gap-3
-          div class=rounded-2xl bg-white10 p-5p class=text-3xl font-black text-orange01pp class=mt-2 font-bold愛知メインpdiv
-          div class=rounded-2xl bg-white10 p-5p class=text-3xl font-black text-orange02pp class=mt-2 font-bold住宅現場pdiv
-          div class=rounded-2xl bg-white10 p-5p class=text-3xl font-black text-orange03pp class=mt-2 font-bold外構・土間pdiv
-          div class=rounded-2xl bg-white10 p-5p class=text-3xl font-black text-orange04pp class=mt-2 font-bold基礎工事pdiv
-        div
-      div
-    div
-  section
+      <div class="glass rounded-[2rem] p-6 reveal-right">
+        <div class="grid grid-cols-2 gap-3">
+          <div class="rounded-2xl bg-white/10 p-5"><p class="text-3xl font-black text-orange">01</p><p class="mt-2 font-bold">愛知メイン</p></div>
+          <div class="rounded-2xl bg-white/10 p-5"><p class="text-3xl font-black text-orange">02</p><p class="mt-2 font-bold">住宅現場</p></div>
+          <div class="rounded-2xl bg-white/10 p-5"><p class="text-3xl font-black text-orange">03</p><p class="mt-2 font-bold">外構・土間</p></div>
+          <div class="rounded-2xl bg-white/10 p-5"><p class="text-3xl font-black text-orange">04</p><p class="mt-2 font-bold">基礎工事</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  section class=py-20 px-4 bg-concrete text-base
-    div class=max-w-6xl mx-auto
-      p class=font-oswald text-orange tracking-[.3em] text-xs revealFLOWp
-      h2 class=text-4xl mdtext-5xl font-black mt-3 reveal-leftご相談から作業まで。h2
+  <section class="py-20 px-4 bg-concrete text-base">
+    <div class="max-w-6xl mx-auto">
+      <p class="font-oswald text-orange tracking-[.3em] text-xs reveal">FLOW</p>
+      <h2 class="text-4xl md:text-5xl font-black mt-3 reveal-left">ご相談から作業まで。</h2>
 
-      div class=grid mdgrid-cols-4 gap-4 mt-10
-        div class=rounded-3xl bg-white p-6 shadow-hard revealp class=text-orange font-oswald text-4xl font-black01ph3 class=font-black mt-3お問い合わせh3p class=text-base60 text-sm mt-2現場内容を共有pdiv
-        div class=rounded-3xl bg-white p-6 shadow-hard revealp class=text-orange font-oswald text-4xl font-black02ph3 class=font-black mt-3内容確認h3p class=text-base60 text-sm mt-2日程・場所・条件確認pdiv
-        div class=rounded-3xl bg-white p-6 shadow-hard revealp class=text-orange font-oswald text-4xl font-black03ph3 class=font-black mt-3段取りh3p class=text-base60 text-sm mt-2必要に応じて調整pdiv
-        div class=rounded-3xl bg-white p-6 shadow-hard revealp class=text-orange font-oswald text-4xl font-black04ph3 class=font-black mt-3現場対応h3p class=text-base60 text-sm mt-2安全第一で作業pdiv
-      div
-    div
-  section
+      <div class="grid md:grid-cols-4 gap-4 mt-10">
+        <div class="rounded-3xl bg-white p-6 shadow-hard reveal"><p class="text-orange font-oswald text-4xl font-black">01</p><h3 class="font-black mt-3">お問い合わせ</h3><p class="text-base/60 text-sm mt-2">現場内容を共有</p></div>
+        <div class="rounded-3xl bg-white p-6 shadow-hard reveal"><p class="text-orange font-oswald text-4xl font-black">02</p><h3 class="font-black mt-3">内容確認</h3><p class="text-base/60 text-sm mt-2">日程・場所・条件確認</p></div>
+        <div class="rounded-3xl bg-white p-6 shadow-hard reveal"><p class="text-orange font-oswald text-4xl font-black">03</p><h3 class="font-black mt-3">段取り</h3><p class="text-base/60 text-sm mt-2">必要に応じて調整</p></div>
+        <div class="rounded-3xl bg-white p-6 shadow-hard reveal"><p class="text-orange font-oswald text-4xl font-black">04</p><h3 class="font-black mt-3">現場対応</h3><p class="text-base/60 text-sm mt-2">安全第一で作業</p></div>
+      </div>
+    </div>
+  </section>
 
-  section id=recruit class=py-20 px-4 bg-orange text-base relative overflow-hidden
-    div class=absolute -right-24 -bottom-24 w-80 h-80 bg-white25 blur-3xl rounded-fulldiv
+  <section id="recruit" class="py-20 px-4 bg-orange text-base relative overflow-hidden">
+    <div class="absolute -right-24 -bottom-24 w-80 h-80 bg-white/25 blur-3xl rounded-full"></div>
 
-    div class=max-w-6xl mx-auto relative
-      p class=font-oswald tracking-[.3em] text-xs font-black revealRECRUITp
-      h2 class=text-4xl mdtext-6xl font-black mt-3 reveal-left従業員募集中。h2
-      p class=text-base75 leading-8 mt-5 max-w-2xl reveal
+    <div class="max-w-6xl mx-auto relative">
+      <p class="font-oswald tracking-[.3em] text-xs font-black reveal">RECRUIT</p>
+      <h2 class="text-4xl md:text-6xl font-black mt-3 reveal-left">従業員募集中。</h2>
+      <p class="text-base/75 leading-8 mt-5 max-w-2xl reveal">
         現場で手に職をつけたい方、体を動かして働きたい方、経験者の方も未経験の方もご相談ください。
-      p
+      </p>
 
-      div class=grid mdgrid-cols-3 gap-4 mt-10
-        div class=rounded-3xl bg-base text-white p-6 tilt-card revealh3 class=text-xl font-black未経験相談OKh3p class=text-white55 text-sm mt-3 leading-7現場の流れから丁寧に。pdiv
-        div class=rounded-3xl bg-base text-white p-6 tilt-card revealh3 class=text-xl font-black経験者歓迎h3p class=text-white55 text-sm mt-3 leading-7圧送・打設経験者歓迎。pdiv
-        div class=rounded-3xl bg-base text-white p-6 tilt-card revealh3 class=text-xl font-black愛知メインh3p class=text-white55 text-sm mt-3 leading-7地域で腰を据えて働ける。pdiv
-      div
+      <div class="grid md:grid-cols-3 gap-4 mt-10">
+        <div class="rounded-3xl bg-base text-white p-6 tilt-card reveal"><h3 class="text-xl font-black">未経験相談OK</h3><p class="text-white/55 text-sm mt-3 leading-7">現場の流れから丁寧に。</p></div>
+        <div class="rounded-3xl bg-base text-white p-6 tilt-card reveal"><h3 class="text-xl font-black">経験者歓迎</h3><p class="text-white/55 text-sm mt-3 leading-7">圧送・打設経験者歓迎。</p></div>
+        <div class="rounded-3xl bg-base text-white p-6 tilt-card reveal"><h3 class="text-xl font-black">愛知メイン</h3><p class="text-white/55 text-sm mt-3 leading-7">地域で腰を据えて働ける。</p></div>
+      </div>
 
-      a href=#contact class=shine mt-8 inline-flex rounded-full bg-base text-white px-8 py-4 font-black shadow-glow reveal
+      <a href="#contact" class="shine mt-8 inline-flex rounded-full bg-base text-white px-8 py-4 font-black shadow-glow reveal">
         求人について相談する
-      a
-    div
-  section
+      </a>
+    </div>
+  </section>
 
-  section id=contact class=py-20 px-4 bg-base
-    div class=max-w-3xl mx-auto
-      p class=font-oswald text-orange tracking-[.3em] text-xs revealCONTACTp
-      h2 class=text-4xl mdtext-5xl font-black mt-3 reveal-left仕事の依頼・求人相談h2
-      p class=text-white62 leading-8 mt-5 reveal
+  <section id="contact" class="py-20 px-4 bg-base">
+    <div class="max-w-3xl mx-auto">
+      <p class="font-oswald text-orange tracking-[.3em] text-xs reveal">CONTACT</p>
+      <h2 class="text-4xl md:text-5xl font-black mt-3 reveal-left">仕事の依頼・求人相談</h2>
+      <p class="text-white/62 leading-8 mt-5 reveal">
         現場内容・日程・場所などを入力して送信してください。Instagram DMやお電話でのご相談も可能です。
-      p
+      </p>
 
-      form class=mt-8 bg-white text-base rounded-[2rem] p-5 mdp-8 space-y-5 shadow-hard reveal onsubmit=event.preventDefault(); alert('サンプルです。実制作時にメール送信へ接続します。');
-        input class=form-input placeholder=お名前  会社名 required
-        input class=form-input placeholder=電話番号 required
-        select class=form-input required
-          option value=お問い合わせ内容option
-          option仕事の依頼option
-          optionコンクリート圧送の相談option
-          option生コン打設の相談option
-          option求人応募option
-          optionその他option
-        select
-        input class=form-input placeholder=現場エリア 例：愛知県〇〇市
-        textarea class=form-input min-h-32 placeholder=現場内容・希望日程・詳細などtextarea
-        button class=shine w-full rounded-full bg-orange text-base py-4 font-black shadow-glow内容を送信するbutton
-      form
-    div
-  section
+      <form class="mt-8 bg-white text-base rounded-[2rem] p-5 md:p-8 space-y-5 shadow-hard reveal" onsubmit="event.preventDefault(); alert('サンプルです。実制作時にメール送信へ接続します。');">
+        <input class="form-input" placeholder="お名前 / 会社名" required>
+        <input class="form-input" placeholder="電話番号" required>
+        <select class="form-input" required>
+          <option value="">お問い合わせ内容</option>
+          <option>仕事の依頼</option>
+          <option>コンクリート圧送の相談</option>
+          <option>生コン打設の相談</option>
+          <option>求人応募</option>
+          <option>その他</option>
+        </select>
+        <input class="form-input" placeholder="現場エリア 例：愛知県〇〇市">
+        <textarea class="form-input min-h-32" placeholder="現場内容・希望日程・詳細など"></textarea>
+        <button class="shine w-full rounded-full bg-orange text-base py-4 font-black shadow-glow">内容を送信する</button>
+      </form>
+    </div>
+  </section>
 
-  footer class=bg-base border-t border-white10 py-10 px-4 text-center text-white45 text-sm
+  <footer class="bg-base border-t border-white/10 py-10 px-4 text-center text-white/45 text-sm">
     © 2026 金子圧送. Sample site by デジまかせ.
-  footer
+  </footer>
 
-  div class=fixed bottom-0 left-0 right-0 z-50 bg-base92 backdrop-blur-xl border-t border-white10 p-3 grid grid-cols-2 gap-3 mdhidden
-    a href=#contact class=shine rounded-full bg-orange text-base py-3 text-center font-black仕事の相談a
-    a href=#recruit class=rounded-full bg-white text-base py-3 text-center font-black求人を見るa
-  div
+  <div class="fixed bottom-0 left-0 right-0 z-50 bg-base/92 backdrop-blur-xl border-t border-white/10 p-3 grid grid-cols-2 gap-3 md:hidden">
+    <a href="#contact" class="shine rounded-full bg-orange text-base py-3 text-center font-black">仕事の相談</a>
+    <a href="#recruit" class="rounded-full bg-white text-base py-3 text-center font-black">求人を見る</a>
+  </div>
 
-  script
-    const observer = new IntersectionObserver((entries) = {
-      entries.forEach(entry = {
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
         if(entry.isIntersecting) entry.target.classList.add('show');
       });
-    }, { threshold 0.12 });
+    }, { threshold: 0.12 });
 
-    document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el = observer.observe(el));
-  script
+    document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => observer.observe(el));
+  </script>
 
-body
-html
+</body>
+</html>
